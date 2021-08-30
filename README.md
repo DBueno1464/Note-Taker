@@ -10,7 +10,7 @@
 
     `npm start`
 
-    Your server will no be live and a page will open on your browser.
+    Your server will now be live and a page will open in your browser.
   ## Usage
   You can write a title for your set of notes and under, write your notes. You can save your notes by pressing the save icon in the top right corner and your saved notes will be shown on the left hand side.
   

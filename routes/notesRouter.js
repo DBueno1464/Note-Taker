@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     // Logging that a GET request was received
-    console.log(`${req.method} request received for feedback`);
+    console.log(`${req.method} request received.`);
     // Reading the db.json and parsing the content
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
 });
@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
 
     // Logging that a POST request was received
-    console.log(`${req.method} request received to submit feedback`);
+    console.log(`${req.method} request received.`);
 
     // Destructuring assignment for the items in req.body
     const { title, text } = req.body;
@@ -40,13 +40,6 @@ router.post('/', (req, res) => {
     } else {
         res.json('Error in posting feedback');
     }
-});
-
-router.delete('/:id', (req, res) => {
-    console.log(`${req.method} request received to submit feedback`);
-
-    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
-    
 });
 
 module.exports = router;
